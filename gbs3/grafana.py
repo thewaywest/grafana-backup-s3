@@ -29,8 +29,8 @@ def all_dashboards():
     return r.json()
 
 
-def get_dashboard(dashboard_uri):
-    r = get('/api/dashboards/{}'.format(dashboard_uri))
+def get_dashboard(dashboard_uid):
+    r = get('/api/dashboards/uid/{}'.format(dashboard_uid))
     r.raise_for_status()
     return r.json()
 
