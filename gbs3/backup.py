@@ -24,7 +24,7 @@ def backup(s3):
 
         for dashboard in all_dashboards:
             eprint('*', dashboard['title'])
-            data = grafana.get_dashboard(dashboard['uri'])
+            data = grafana.get_dashboard(dashboard['uid'])
             save_dashboard(dashboard, data, tmp_dir)
 
         eprint('fetching datasources')
